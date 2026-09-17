@@ -1,0 +1,5 @@
+node_modules/
+video/
+.DS_Store
+.preview/
+splat/

@@ -1,0 +1,52 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Plena · Splat Share</title>
+<style>
+html,body{margin:0;background:#0b0d12;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif}
+#v{position:fixed;inset:0}
+header{position:fixed;top:0;left:0;right:0;padding:16px 20px 28px;background:linear-gradient(to bottom,rgba(0,0,0,.7),transparent);z-index:10;pointer-events:none}
+header small{display:block;color:#8b95a7;font-size:12px;font-weight:500}
+header b{display:block;color:#f3f4f6;font-size:16px;margin-top:2px}
+</style>
+<script type="importmap">
+{"imports":{"three":"/node_modules/three/build/three.module.js","@mkkellogg/gaussian-splats-3d":"/node_modules/@mkkellogg/gaussian-splats-3d/build/gaussian-splats-3d.module.js"}}
+</script>
+<header><small>← Splat Share</small><b>Den fineste plena · demo-scene</b></header>
+<div id="v"></div>
+<script type="module">
+import * as THREE from 'three';
+import { SceneRevealMode, Viewer } from '@mkkellogg/gaussian-splats-3d';
+
+// Samme oppsett som SplatViewer i splat-share, men uten egen render-løkke,
+// så opptaket kan ta ett og ett ferdig sortert bilde.
+const viewer = new Viewer({
+	rootElement: document.getElementById('v'),
+	cameraUp: [0, 1, 0],
+	initialCameraPosition: [0, 1.9, 2.7],
+	initialCameraLookAt: [0, -0.08, 0],
+	sphericalHarmonicsDegree: 0,
+	threeScene: new THREE.Scene(),
+	sharedMemoryForWorkers: false,
+	selfDrivenMode: false,
+	useBuiltInControls: false,
+	// Uten dette fader biblioteket inn scenen fra midten, og de første bildene blir runde
+	sceneRevealMode: SceneRevealMode.Instant,
+});
+await viewer.addSplatScene('/splat/plen.splat', { format: 0, showLoadingUI: false, progressiveLoad: false });
+viewer.renderer.setClearColor(0x0b0d12, 1);
+
+window.setOrbit = async (angle, radius, height) => {
+	const cam = viewer.camera;
+	cam.position.set(Math.sin(angle) * radius, height, Math.cos(angle) * radius);
+	cam.lookAt(0, -0.08, 0);
+	for (let i = 0; i < 6; i++) {
+		viewer.update();
+		viewer.render();
+		await new Promise((r) => requestAnimationFrame(r));
+	}
+	await new Promise((r) => setTimeout(r, 50));
+	viewer.update();
+	viewer.render();
+};
+window.ready = true;
+</script>
