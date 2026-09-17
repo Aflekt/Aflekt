@@ -116,7 +116,7 @@ function icon(slug) {
 
 let y = PAD;
 const rows = [];
-TOOLBOX.forEach(([label, items], ri) => {
+TOOLBOX.forEach(([label, items]) => {
 	const parts = [];
 	const lab = textUse(mono, 'mono', label.toUpperCase(), PAD, y + 19, 11, 1.4);
 	parts.push(`<g fill="#ffa21a">${lab.out}</g>`);
@@ -143,7 +143,7 @@ TOOLBOX.forEach(([label, items], ri) => {
 		parts.push(`<g fill="${TEXT}">${tp.out}</g>`);
 		x += w + GAP;
 	}
-	rows.push(`<g class="row" style="animation-delay:${(ri * 0.12).toFixed(2)}s">${parts.join('')}</g>`);
+	rows.push(`<g>${parts.join('')}</g>`);
 	y = rowY + CHIP_H + 18;
 });
 
@@ -154,8 +154,6 @@ const all = TOOLBOX.flatMap(([l, items]) => `${l}: ${items.map((i) => i[0]).join
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Toolbox. ${all.replace(/&/g, '&amp;')}.">
 <style>
 .chip{fill:#fff;fill-opacity:.05;stroke:#fff;stroke-opacity:.1}
-.row{animation:in .5s ease-out both}
-@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .blink{animation:blink 1s steps(1) infinite}
 @keyframes blink{0%{opacity:1}50%{opacity:0}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
