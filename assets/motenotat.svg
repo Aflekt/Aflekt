@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 631" width="440" height="631" role="img" aria-label="Møtenotat. Et møte tas opp, lydkurven beveger seg, og referatet skriver seg selv linje for linje.">
+<style>
+.b{transform-box:fill-box;transform-origin:center;animation:bar 1.1s ease-in-out infinite}
+@keyframes bar{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+.dot{animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.line{transform-box:fill-box;transform-origin:left center;animation:write .6s ease-out both}
+@keyframes write{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+.tick{animation:pop .4s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important}}
+</style>
+<defs>
+<clipPath id="frame"><rect width="440" height="631" rx="18"/></clipPath>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fbfbf9"/><stop offset="1" stop-color="#f1f1ed"/>
+</linearGradient>
+<linearGradient id="fjord" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0f6e6a"/><stop offset="1" stop-color="#0a4f4c"/>
+</linearGradient>
+</defs>
+
+<g clip-path="url(#frame)">
+  <rect width="440" height="631" fill="url(#paper)"/>
+
+  <!-- Vinduskrom, som i appen -->
+  <rect x="0" y="0" width="440" height="52" fill="#f4f4f1"/>
+  <circle cx="26" cy="26" r="5.5" fill="#dcdcd6"/>
+  <circle cx="45" cy="26" r="5.5" fill="#dcdcd6"/>
+  <circle cx="64" cy="26" r="5.5" fill="#dcdcd6"/>
+  <rect x="0" y="51" width="440" height="1" fill="#e4e4de"/>
+
+  <!-- Opptak pågår -->
+  <circle class="dot" cx="42" cy="100" r="6" fill="#d9534f"/>
+  <text x="58" y="105" font-family="-apple-system,system-ui,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.6" fill="#d9534f">TAR OPP</text>
+  <text x="330" y="107" font-family="-apple-system,system-ui,sans-serif" font-size="22" font-weight="600" fill="#0f6e6a" font-variant-numeric="tabular-nums">41:08</text>
+
+  <!-- Lydkurve: to spor -->
+  <g>
+    <text x="42" y="152" font-family="-apple-system,system-ui,sans-serif" font-size="12.5" font-weight="600" fill="#3c4248">Meg</text>
+    <g fill="#0f6e6a">
+      <rect class="b" x="120" y="138" width="5" height="18" rx="2.5" style="animation-delay:0s"/>
+      <rect class="b" x="132" y="138" width="5" height="18" rx="2.5" style="animation-delay:.12s"/>
+      <rect class="b" x="144" y="138" width="5" height="18" rx="2.5" style="animation-delay:.24s"/>
+      <rect class="b" x="156" y="138" width="5" height="18" rx="2.5" style="animation-delay:.36s"/>
+      <rect class="b" x="168" y="138" width="5" height="18" rx="2.5" style="animation-delay:.48s"/>
+      <rect class="b" x="180" y="138" width="5" height="18" rx="2.5" style="animation-delay:.6s"/>
+    </g>
+    <text x="42" y="190" font-family="-apple-system,system-ui,sans-serif" font-size="12.5" font-weight="600" fill="#3c4248">Deltakere</text>
+    <g fill="#3fc4a5">
+      <rect class="b" x="120" y="176" width="5" height="18" rx="2.5" style="animation-delay:.3s"/>
+      <rect class="b" x="132" y="176" width="5" height="18" rx="2.5" style="animation-delay:.05s"/>
+      <rect class="b" x="144" y="176" width="5" height="18" rx="2.5" style="animation-delay:.42s"/>
+      <rect class="b" x="156" y="176" width="5" height="18" rx="2.5" style="animation-delay:.18s"/>
+      <rect class="b" x="168" y="176" width="5" height="18" rx="2.5" style="animation-delay:.55s"/>
+      <rect class="b" x="180" y="176" width="5" height="18" rx="2.5" style="animation-delay:.28s"/>
+    </g>
+  </g>
+
+  <rect x="42" y="222" width="356" height="1" fill="#e4e4de"/>
+
+  <!-- Referatet skriver seg -->
+  <text x="42" y="258" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="700" letter-spacing="1.3" fill="#0f6e6a">REFERAT</text>
+  <text x="42" y="292" font-family="-apple-system,system-ui,sans-serif" font-size="21" font-weight="600" fill="#0c0e10">Ukentlig gjennomgang</text>
+
+  <g fill="#c8c8c1">
+    <rect class="line" x="42" y="318" width="330" height="8" rx="4" style="animation-delay:.2s"/>
+    <rect class="line" x="42" y="336" width="296" height="8" rx="4" style="animation-delay:.35s"/>
+    <rect class="line" x="42" y="354" width="344" height="8" rx="4" style="animation-delay:.5s"/>
+  </g>
+
+  <!-- Beslutninger -->
+  <rect x="42" y="394" width="3" height="18" rx="1.5" fill="#0f6e6a"/>
+  <text x="56" y="409" font-family="-apple-system,system-ui,sans-serif" font-size="15" font-weight="600" fill="#0c0e10">Beslutninger</text>
+  <g fill="#c8c8c1">
+    <rect class="line" x="42" y="428" width="310" height="8" rx="4" style="animation-delay:.75s"/>
+    <rect class="line" x="42" y="446" width="268" height="8" rx="4" style="animation-delay:.88s"/>
+  </g>
+
+  <!-- Aksjonspunkter, med avkryssing -->
+  <rect x="42" y="486" width="3" height="18" rx="1.5" fill="#0f6e6a"/>
+  <text x="56" y="501" font-family="-apple-system,system-ui,sans-serif" font-size="15" font-weight="600" fill="#0c0e10">Aksjonspunkter</text>
+
+  <g>
+    <rect x="42" y="520" width="14" height="14" rx="3.5" fill="none" stroke="#0f6e6a" stroke-width="1.6"/>
+    <path class="tick" d="M45.5 527.2l3.2 3.2 6-6.4" fill="none" stroke="#0f6e6a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:1.25s"/>
+    <rect class="line" x="68" y="523" width="250" height="8" rx="4" fill="#c8c8c1" style="animation-delay:1.05s"/>
+  </g>
+  <g>
+    <rect x="42" y="552" width="14" height="14" rx="3.5" fill="none" stroke="#0f6e6a" stroke-width="1.6"/>
+    <path class="tick" d="M45.5 559.2l3.2 3.2 6-6.4" fill="none" stroke="#0f6e6a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:1.55s"/>
+    <rect class="line" x="68" y="555" width="212" height="8" rx="4" fill="#c8c8c1" style="animation-delay:1.35s"/>
+  </g>
+
+  <rect x="0" y="596" width="440" height="35" fill="url(#fjord)"/>
+  <text x="42" y="619" font-family="-apple-system,system-ui,sans-serif" font-size="12.5" font-weight="600" letter-spacing=".4" fill="#e8f5f2">Lyden slettes når referatet er skrevet</text>
+</g>
+</svg>
