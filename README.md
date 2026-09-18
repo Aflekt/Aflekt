@@ -8,20 +8,28 @@ Jeg synes datamaskiner er kult. Spesielt å trykke på knapper, og så bare skje
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
+<a href="https://aflektai.no/#produkter"><img src="assets/motenotat.svg" alt="Møtenotat: et møte tas opp, lydkurven beveger seg, og referatet skriver seg selv med beslutninger og aksjonspunkter."></a>
+<h3>Møtenotat</h3>
+<p>Jeg er lei av å skrive referat, og enda mer lei av å lese mine egne. Nå tar maskina opp møtet, skriver ned hva som ble sagt, og lager referatet selv. Virker på Teams og på folk rundt et bord. Vil du ikke sende lyden noe sted, kjører den på din egen maskin.</p>
+<p><a href="https://aflektai.no/#produkter"><b>Last ned →</b></a> &nbsp;·&nbsp; <sub>Mac, signert og notarisert</sub></p>
+</td>
+<td width="50%" valign="top">
 <a href="https://blinklysprove.vercel.app"><img src="assets/blinklysprove.gif" alt="Blinklysprøven: bilen blinker til høyre, svinger til venstre, krasjer og sjåføren havner i fengsel."></a>
 <h3>Blinklysprøven</h3>
 <p>Statens Blinklysdirektorat har innført obligatorisk blinklysprøve for alle bilister. Ti saker, null nåde. Glemmer du å blinke, havner du i fengsel.</p>
 <p><a href="https://blinklysprove.vercel.app"><b>Ta prøven →</b></a> &nbsp;·&nbsp; <a href="https://github.com/Aflekt/blinklysprove">kildekode</a></p>
 </td>
-<td width="33%" valign="top">
+</tr>
+<tr>
+<td width="50%" valign="top">
 <a href="https://splat-share.vercel.app"><img src="assets/splat-share.gif" alt="En Gaussian splat av en plentorv med klippestriper, tusenfryd og en robotklipper, som roterer i Splat Share sin 3D-viewer."></a>
 <h3>Splat Share</h3>
 <p>Last opp en Gaussian splat og få en kort lenke med 3D-viewer, QR-kode og embed til Finn-annonsen. For boligfotografer som er lei av å sende .ply-filer på e-post.</p>
 <p><sub>Plena er laget i kode, 295 000 splats.</sub></p>
 <p><a href="https://splat-share.vercel.app"><b>Prøv den →</b></a></p>
 </td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 <img src="assets/inspectorson-teaser.svg" alt="Saksmappe 0917, Inspectorson. Stemplet: under etterforskning.">
 <h3>Sak 0917</h3>
 <p>Under etterforskning. Mer kan vi ikke si akkurat nå. Men det lukter litt surt.</p>
