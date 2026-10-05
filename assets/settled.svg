@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 631" width="440" height="631" role="img" aria-label="settled. Et filmkort sveipes til høyre med et hjerte, og to venner matcher på samme film i sofaen.">
+<style>
+.swipe{transform-box:fill-box;transform-origin:50% 120%;animation:swipe 4s ease-in-out infinite}
+@keyframes swipe{0%,30%{transform:translateX(0) rotate(0);opacity:1}55%{transform:translateX(260px) rotate(14deg);opacity:0}56%,100%{transform:translateX(0) rotate(0);opacity:0}}
+.heart{transform-box:fill-box;transform-origin:center;animation:heart 4s ease-in-out infinite}
+@keyframes heart{0%,22%{opacity:0;transform:scale(.4)}32%,48%{opacity:1;transform:scale(1)}56%,100%{opacity:0;transform:scale(1.3)}}
+.next{transform-box:fill-box;transform-origin:center;animation:next 4s ease-in-out infinite}
+@keyframes next{0%,45%{transform:translateY(10px) scale(.95)}60%,100%{transform:translateY(0) scale(1)}}
+.match{animation:match 4s ease-in-out infinite}
+@keyframes match{0%,55%{opacity:0}65%,95%{opacity:1}100%{opacity:0}}
+.glow{animation:glow 3s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.55}50%{opacity:.9}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important}}
+</style>
+<defs>
+<clipPath id="frame"><rect width="440" height="631" rx="18"/></clipPath>
+<linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#181e30"/><stop offset="1" stop-color="#0e1220"/>
+</linearGradient>
+<radialGradient id="lamp" cx=".85" cy=".1" r=".7">
+<stop offset="0" stop-color="#ffb35c" stop-opacity=".28"/><stop offset="1" stop-color="#ffb35c" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="poster1" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#8fa6ff"/><stop offset="1" stop-color="#3b4a8f"/>
+</linearGradient>
+<linearGradient id="poster2" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#ef8f86"/><stop offset="1" stop-color="#7a3a52"/>
+</linearGradient>
+<linearGradient id="poster3" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#ffb35c"/><stop offset="1" stop-color="#8a4a1c"/>
+</linearGradient>
+</defs>
+
+<g clip-path="url(#frame)">
+  <rect width="440" height="631" fill="url(#night)"/>
+  <rect class="glow" width="440" height="631" fill="url(#lamp)"/>
+
+  <!-- Toppen, som i appen -->
+  <text x="36" y="58" font-family="-apple-system,system-ui,sans-serif" font-size="26" font-weight="700" fill="#f4efe6" letter-spacing="-.5">settled</text>
+  <text x="36" y="84" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600" fill="#a3abc0">I kveld · deg og Kari</text>
+  <circle cx="374" cy="58" r="14" fill="#8fa6ff"/>
+  <circle cx="396" cy="58" r="14" fill="#ef8f86" stroke="#181e30" stroke-width="3"/>
+
+  <!-- Bunken med filmkort -->
+  <g class="next">
+    <rect x="86" y="128" width="268" height="340" rx="20" fill="url(#poster2)"/>
+    <rect x="86" y="378" width="268" height="90" fill="#0e1220" fill-opacity=".45"/>
+    <text x="106" y="412" font-family="-apple-system,system-ui,sans-serif" font-size="22" font-weight="700" fill="#f4efe6">Komedie, lett</text>
+    <text x="106" y="438" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600" fill="#f4efe6" fill-opacity=".8">1 t 40 · IMDb 7,4</text>
+  </g>
+  <g class="swipe">
+    <rect x="86" y="118" width="268" height="340" rx="20" fill="url(#poster1)"/>
+    <rect x="86" y="368" width="268" height="90" rx="0" fill="#0e1220" fill-opacity=".45"/>
+    <text x="106" y="402" font-family="-apple-system,system-ui,sans-serif" font-size="22" font-weight="700" fill="#f4efe6">Sci-fi, rolig</text>
+    <text x="106" y="428" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600" fill="#f4efe6" fill-opacity=".8">2 t · IMDb 7,9 · på tjenestene dere har</text>
+    <g class="heart">
+      <circle cx="310" cy="160" r="26" fill="#ef8f86"/>
+      <path d="M310 172c-9-6-15-11-15-17a7 7 0 0 1 15-3 7 7 0 0 1 15 3c0 6-6 11-15 17z" fill="#f4efe6"/>
+    </g>
+  </g>
+
+  <!-- Knappene under kortet -->
+  <g font-family="-apple-system,system-ui,sans-serif" font-size="20" text-anchor="middle">
+    <circle cx="150" cy="510" r="26" fill="#222a40" stroke="#2c3550"/>
+    <text x="150" y="517" fill="#a3abc0">✕</text>
+    <circle cx="220" cy="510" r="30" fill="#ef8f86"/>
+    <text x="220" y="518" fill="#0e1220">♥</text>
+    <circle cx="290" cy="510" r="26" fill="#222a40" stroke="#2c3550"/>
+    <text x="290" y="517" fill="#8fa6ff">👍</text>
+  </g>
+
+  <!-- Match -->
+  <g class="match">
+    <rect x="96" y="556" width="248" height="34" rx="17" fill="#ffb35c"/>
+    <text x="220" y="578" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700" fill="#231404">Dere matcher! Se den i kveld</text>
+  </g>
+
+  <rect x="0" y="600" width="440" height="31" fill="#0e1220"/>
+  <text x="36" y="620" font-family="-apple-system,system-ui,sans-serif" font-size="12.5" font-weight="600" letter-spacing=".4" fill="#ffb35c">Noe alle i sofaen vil se</text>
+</g>
+</svg>
