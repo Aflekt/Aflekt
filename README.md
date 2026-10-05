@@ -36,6 +36,20 @@ Jeg synes datamaskiner er kult. Spesielt å trykke på knapper, og så bare skje
 <p><sub>Kommer til aflekt.no</sub></p>
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://settled.no"><img src="assets/settled.svg" alt="settled: et filmkort sveipes til høyre med et hjerte, og to venner matcher på samme film."></a>
+<h3>settled</h3>
+<p>Det tar lengre tid å velge film enn å se den. Nå sveiper du det du liker, og settled finner noe alle i sofaen vil se, på tjenestene dere faktisk har. Sveip sammen med vennene dine og se hva dere matcher på.</p>
+<p><a href="https://settled.no"><b>Åpne settled →</b></a> &nbsp;·&nbsp; <sub>iOS-appen er under vurdering</sub></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://fradragsjakt-two.vercel.app"><img src="assets/fradragsjakt.svg" alt="Fradragsjakt: et organisasjonsnummer skrives inn, og fradragene som passer krysses av, hver med paragrafen den bygger på."></a>
+<h3>Fradragsjakt</h3>
+<p>Hva kan bedriften din trekke fra? Skriv inn organisasjonsnummeret, kryss av det som gjelder, og se fradragene og de skattefrie godene som passer for ditt ENK eller AS. Hvert punkt har paragrafen det bygger på, også triksene folk deler på forum.</p>
+<p><a href="https://fradragsjakt-two.vercel.app"><b>Finn fradragene →</b></a></p>
+</td>
+</tr>
 </table>
 
 ## Toolbox

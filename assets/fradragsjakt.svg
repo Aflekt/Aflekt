@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 631" width="440" height="631" role="img" aria-label="Fradragsjakt. Et organisasjonsnummer skrives inn, og fradragene som passer for bedriften krysses av, hver med paragrafen den bygger på.">
+<style>
+.type{animation:type 1.6s steps(11,end) both}
+@keyframes type{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.caret{animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.row{animation:rise .5s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.tick{animation:pop .4s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important}}
+</style>
+<defs>
+<clipPath id="frame"><rect width="440" height="631" rx="18"/></clipPath>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fbfcf8"/><stop offset="1" stop-color="#f1f4ec"/>
+</linearGradient>
+</defs>
+
+<g clip-path="url(#frame)">
+  <rect width="440" height="631" fill="url(#paper)"/>
+
+  <!-- Vinduskrom -->
+  <rect x="0" y="0" width="440" height="52" fill="#e3e9dc"/>
+  <circle cx="26" cy="26" r="5.5" fill="#b9c6b0"/>
+  <circle cx="45" cy="26" r="5.5" fill="#b9c6b0"/>
+  <circle cx="64" cy="26" r="5.5" fill="#b9c6b0"/>
+  <rect x="0" y="51" width="440" height="1" fill="#b9c6b0"/>
+
+  <text x="36" y="100" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#17263d">Fradragsjakt</text>
+  <text x="36" y="124" font-family="-apple-system,system-ui,sans-serif" font-size="13" fill="#44536b">Hva kan bedriften din trekke fra?</text>
+
+  <!-- Org.nr skrives inn -->
+  <rect x="36" y="146" width="368" height="48" rx="10" fill="#fbfcf8" stroke="#17263d" stroke-width="1.5"/>
+  <text x="54" y="176" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="700" letter-spacing="1" fill="#4f5a6b">ORG.NR</text>
+  <text class="type" x="116" y="177" font-family="ui-monospace,Menlo,monospace" font-size="17" fill="#17263d">912 345 678</text>
+  <rect class="caret" x="238" y="162" width="2" height="20" fill="#17263d"/>
+
+  <text x="36" y="226" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" fill="#1f6b3e">ENKELTPERSONFORETAK · PASSER FOR DEG</text>
+
+  <!-- Fradragene krysses av, hver med paragraf -->
+  <g font-family="-apple-system,system-ui,sans-serif">
+    <g class="row" style="animation-delay:1.7s">
+      <rect x="36" y="244" width="368" height="64" rx="12" fill="#fbfcf8" stroke="#b9c6b0"/>
+      <rect x="54" y="265" width="20" height="20" rx="5" fill="#1f6b3e"/>
+      <path class="tick" d="M58.5 275.5l4 4 7.5-8" fill="none" stroke="#fbfcf8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:1.95s"/>
+      <text x="88" y="273" font-size="15" font-weight="600" fill="#17263d">Hjemmekontor</text>
+      <text x="88" y="293" font-size="12" fill="#44536b">Skatteloven § 6-1</text>
+    </g>
+    <g class="row" style="animation-delay:2.2s">
+      <rect x="36" y="318" width="368" height="64" rx="12" fill="#fbfcf8" stroke="#b9c6b0"/>
+      <rect x="54" y="339" width="20" height="20" rx="5" fill="#1f6b3e"/>
+      <path class="tick" d="M58.5 349.5l4 4 7.5-8" fill="none" stroke="#fbfcf8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:2.45s"/>
+      <text x="88" y="347" font-size="15" font-weight="600" fill="#17263d">Kjøring med egen bil</text>
+      <text x="88" y="367" font-size="12" fill="#44536b">Skatteloven § 6-1</text>
+    </g>
+    <g class="row" style="animation-delay:2.7s">
+      <rect x="36" y="392" width="368" height="64" rx="12" fill="#fbfcf8" stroke="#b9c6b0"/>
+      <rect x="54" y="413" width="20" height="20" rx="5" fill="#1f6b3e"/>
+      <path class="tick" d="M58.5 423.5l4 4 7.5-8" fill="none" stroke="#fbfcf8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:2.95s"/>
+      <text x="88" y="421" font-size="15" font-weight="600" fill="#17263d">Telefon og internett</text>
+      <text x="88" y="441" font-size="12" fill="#44536b">Skatteloven § 6-1</text>
+    </g>
+    <g class="row" style="animation-delay:3.2s">
+      <rect x="36" y="466" width="368" height="64" rx="12" fill="#fbfcf8" stroke="#b9c6b0" stroke-dasharray="4 4"/>
+      <rect x="54" y="487" width="20" height="20" rx="5" fill="none" stroke="#8a5a00" stroke-width="1.6"/>
+      <text x="88" y="495" font-size="15" font-weight="600" fill="#17263d">Forum-triks: sjekk selv</text>
+      <text x="88" y="515" font-size="12" fill="#8a5a00">Merket når grunnlaget er tynt</text>
+    </g>
+  </g>
+
+  <rect x="0" y="596" width="440" height="35" fill="#17263d"/>
+  <text x="36" y="619" font-family="-apple-system,system-ui,sans-serif" font-size="12.5" font-weight="600" letter-spacing=".4" fill="#f1f4ec">Hvert punkt har paragrafen det bygger på</text>
+</g>
+</svg>
